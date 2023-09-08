@@ -14,7 +14,7 @@ from collections import defaultdict
 import argparse
 
 class predictionClass():
-    def __init__(self,wild_pdb='1ert_A',mutation_info='D_59_N',input_pdb_dir='PDB_reindexed',save_dir='predictions') -> None:
+    def __init__(self,wild_pdb='1ert_A',mutation_info='D_59_N',input_pdb_dir='MutData2022_PDB',save_dir='predictions') -> None:
         self.wild_pdb = wild_pdb
         self.mutation_info = mutation_info
         self.input_pdb_dir = input_pdb_dir

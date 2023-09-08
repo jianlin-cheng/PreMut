@@ -219,8 +219,8 @@ PATH_PREFIX = subprocess.check_output("cd ..;pwd", shell=True).decode("utf-8")[0
 PROJECT_NAME = 'PreMut'
 PROJECT_DIR = os.path.join(PATH_PREFIX,PROJECT_NAME)
 PDB_DIR = os.path.join(PROJECT_DIR,'PDB')
-# PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'PDB_reindexed_2023')
-PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'PDB_reindexed')
+# PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'MutData2023_PDB')
+PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'MutData2022_PDB')
 
 # JSON_PATH = os.path.join(PROJECT_DIR,'thermomutdb.json')
 # DATA_DIR = os.path.join(PROJECT_DIR,'PDB')
