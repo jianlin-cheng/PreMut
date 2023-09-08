@@ -127,9 +127,9 @@ class My_Dataset_2023(Dataset):
 
 
 
-dataset = My_Dataset(csv_file='MutData2022.csv',cluster_dict='mutated_cluster_dict',training=True)
-test_dataset = My_Dataset(csv_file='MutData2022.csv',cluster_dict='mutated_cluster_dict',training=False)
-test_dataset_2023 = My_Dataset_2023(csv_file='MutData2023.csv',cluster_dict='mutated_cluster_dict_2023')
+dataset = My_Dataset(csv_file='MutData2022.csv',cluster_dict='MutData2022_cluster_dict',training=True)
+test_dataset = My_Dataset(csv_file='MutData2022.csv',cluster_dict='MutData2022_cluster_dict',training=False)
+test_dataset_2023 = My_Dataset_2023(csv_file='MutData2023.csv',cluster_dict='MutData2023_cluster_dict')
 train_set_size = int(len(dataset) * 0.9)
 valid_set_size = len(dataset) - train_set_size
 train_ds, validate_ds = random_split(dataset, [train_set_size, valid_set_size])
