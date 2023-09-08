@@ -17,6 +17,9 @@ python src/prediction.py WILDPDB MUTATIONINFO WILDPDBDIR PREDICTIONDIR
 * Here WILDPDB is the pdb code with the chain id (e.g 1ert_A), MUTATIONINFO is the information regarding the wild residue, mutated position (0 indexed) and the mutated residue (e.g D_59_N), WILDPDBDIR is the directory where the wild pdb is stored, and PREDICTIONDIR is the directory to save the predicted PDB files.
 
 ## Training
-* 
+* run the following command to train the model.
+```
+python src/train.py
+```
 
 
