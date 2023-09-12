@@ -7,6 +7,7 @@ Accurate prediction of single-site mutation induced changes on protein structure
 conda env create -f environment.yml
 ```
 * Download and install TMScore and TMAlign from this link: (https://zhanggroup.org/TM-score/, https://zhanggroup.org/TM-align/)
+* Download the datasets MutData2022 and MutData2023 from the following link (https://zenodo.org/record/8339451). Uncompress the files, then save the folders MutData2022_PDB and MutData2023_PDB in the root of the repository.
 ## Run prediction
 
 * To do a prediction, save the wild pdb file in a folder, also create a folder to save the prediction.
