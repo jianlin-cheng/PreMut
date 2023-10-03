@@ -1,4 +1,7 @@
 # PreMut
+<p align="center">
+  <img src="model.png" width="750" title="hover text">
+</p>
 Accurate prediction of single-site mutation induced changes on protein structures with equivariant graph neural networks. PreMut takes as input a wild-type protein structure and the mutation information to predict the structure of the mutated protein. 
 
 ## Installation
