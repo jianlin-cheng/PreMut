@@ -5,6 +5,8 @@
 Accurate prediction of single-site mutation induced changes on protein structures with equivariant graph neural networks. PreMut takes as input a wild-type protein structure and the mutation information to predict the structure of the mutated protein. 
 
 ## Installation
+* Download or clone this repository
+
 * Setup environment by running the following command
 ```
 conda env create -f environment.yml
