@@ -136,12 +136,18 @@ class predictionClass():
 
 
 parser = argparse.ArgumentParser(description='Prediction using PreMut')
-parser.add_argument('wild_pdb', help='name of the wild pdb file with the chain code, example 8B0S_A')
+parser.add_argument('wild_pdb_path', help='path to the wild pdb file with the chain code, example /path/to/8B0S.pdb')
 parser.add_argument('mutation_info', help='Mutation information, which residue to be replaced by which, example: C_144_A')
-parser.add_argument('input_pdb_dir', help='Directory containing input PDB files')
+parser.add_argument('chain_id',help='Provide the chain id')
 parser.add_argument('save_dir', help='Directory to save the output')
 args = parser.parse_args()
+wild_pdb = args.wild_pdb_path.split('.')[0].split('/')[-1] + '_'+args.chain_id
+tmp_lst = args.wild_pdb_path.split('.')[0].split('/')
+wild_pdb_dir = ''
+for i in range(len(tmp_lst)-1):
+    wild_pdb_dir += tmp_lst[i]
+    wild_pdb_dir += '/'
 
-prediction = predictionClass(wild_pdb=args.wild_pdb,mutation_info=args.mutation_info,input_pdb_dir=args.input_pdb_dir,save_dir=args.save_dir)
+prediction = predictionClass(wild_pdb=wild_pdb,mutation_info=args.mutation_info,input_pdb_dir=wild_pdb_dir,save_dir=args.save_dir)
 
 prediction.predict()
