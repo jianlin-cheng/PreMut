@@ -139,7 +139,7 @@ parser = argparse.ArgumentParser(description='Prediction using PreMut')
 parser.add_argument('wild_pdb_path', help='path to the wild pdb file with the chain code, example /path/to/8B0S.pdb')
 parser.add_argument('mutation_info', help='Mutation information, which residue to be replaced by which, example: C_144_A')
 parser.add_argument('chain_id',help='Provide the chain id')
-parser.add_argument('save_dir', help='Directory to save the output')
+parser.add_argument('output_dir', help='Directory to save the output')
 args = parser.parse_args()
 wild_pdb = args.wild_pdb_path.split('.')[0].split('/')[-1] + '_'+args.chain_id
 tmp_lst = args.wild_pdb_path.split('.')[0].split('/')
