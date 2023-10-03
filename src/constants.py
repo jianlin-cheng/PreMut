@@ -30,7 +30,7 @@ BASE_AMINO_ACIDS: List[str] = [
 
 BASE_AMINO_ACIDS_3_LETTER = ['ALA','ARG','ASN','ASP','CYS','GLU','GLN','GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER','THR','TRP','TYR','VAL']
 
-
+print(len(BASE_AMINO_ACIDS_3_LETTER))
 BACKBONE_ATOMS = ['N','CA','C','O']
 # AMINO_ACID_ATOM ={'ALA': BACKBONE_ATOMS + ['CB'],
 # 'ARG': BACKBONE_ATOMS + ['CB','CG','CD','NE','CZ','NH1','NH2'], 
@@ -106,6 +106,7 @@ AMINO_ACIDS_3_TO_1= {'CYS': 'C', 'ASP': 'D', 'SER': 'S', 'GLN': 'Q', 'LYS': 'K',
 AMINO_ACIDS_1_TO_3 = {v: k for k, v in AMINO_ACIDS_3_TO_1.items()}
 
 ATOMS = ['C', 'CA', 'CB', 'CD', 'CD1', 'CD2', 'CE', 'CE1', 'CE2', 'CE3', 'CG', 'CG1', 'CG2', 'CH2', 'CZ', 'CZ2', 'CZ3', 'N', 'ND1', 'ND2', 'NE', 'NE1', 'NE2', 'NH1', 'NH2', 'NZ', 'O', 'OD1', 'OD2', 'OE1', 'OE2', 'OG', 'OG1', 'OH', 'OXT', 'SD', 'SG']
+
 # ATOMS = []
 
 # ATOMS = ATOMS + BACKBONE_ATOMS
@@ -220,7 +221,7 @@ PROJECT_NAME = 'PreMut'
 PROJECT_DIR = os.path.join(PATH_PREFIX,PROJECT_NAME)
 PDB_DIR = os.path.join(PROJECT_DIR,'PDB')
 # PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'MutData2023_PDB')
-PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'MutData2022_PDB')
+PDB_REINDEXED_DIR = os.path.join(PROJECT_DIR,'MutData2023_PDB')
 
 # JSON_PATH = os.path.join(PROJECT_DIR,'thermomutdb.json')
 # DATA_DIR = os.path.join(PROJECT_DIR,'PDB')

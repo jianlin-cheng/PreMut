@@ -553,9 +553,11 @@ class PDBReader_All_Atom():
         return graph, label_coords.float()
     
    
-# pdbreader = PDBReader_All_Atom(pdb_dir=PDB_REINDEXED_DIR,mutant_pdb='2BWX_A',wild_pdb='2bha_A',mutation_info='H_353_A')
+# pdbreader = PDBReader_All_Atom(pdb_dir=PDB_REINDEXED_DIR,mutant_pdb='7MGR_A',wild_pdb='8b0s_A',mutation_info='C_144_A')
 
 # x,y = pdbreader.pdb_to_graph()
+# print(x['node_one_hot_sequence'][1118])
+# print(x['node_one_hot_sequence_residues'][1118])
 # print(x['node_one_hot_sequence_residues'].size())
 # node_one_hot_sequence_residues = x['node_one_hot_sequence_residues']
 # print(pdbreader.make_esm_features_atom_level())
