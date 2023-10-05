@@ -25,6 +25,9 @@ python src/prediction.py wild_pdb_path mutation_info chain_id output_dir
 python src/prediction.py /path/to/1ert.pdb D_59_N A predictions
 ```
 
+## Refine predictions
+* ATOMRefine method is utilized to refine further the predictions made by PreMut. Install ATOMRefine from this link (https://github.com/BioinfoMachineLearning/ATOMRefine) and follow the instructions provided in that repository to apply refinement to the predictions made with PreMut.
+
 ## Training
 * Download and install TM-score and TM-align from this link: (https://zhanggroup.org/TM-score/, https://zhanggroup.org/TM-align/)
 * Download all the files in the MutData2022 and MutData2023 datasets from the link (https://zenodo.org/record/8401256). Uncompress the files, and then move the uncompressed folders to the root directory of the PreMut repository.
