@@ -38,6 +38,7 @@ python src/train.py
 ```
 * After the completion of training, the model weights are stored in a folder titled Checkpoints.
 * You can select the model with the best validation performance from the Checkpoints folder to test.
+  
 ## Evaluation
 * Evaluation script is provided to check the reported performance in the paper.
 * Make sure the files are downloaded, uncompressed and moved to the root of the directory as instructed in the previous section.
