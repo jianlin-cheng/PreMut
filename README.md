@@ -2,7 +2,7 @@
 <p align="center">
   <img src="model.png" width="750" title="hover text">
 </p>
-Accurate prediction of single-site mutation induced changes on protein structures with equivariant graph neural networks. PreMut takes as input a wild-type protein structure and the mutation information to predict the structure of the mutated protein. 
+Accurate prediction of the structure of any protein mutant with a single-site mutation with equivariant graph neural networks. PreMut takes as input a wild-type protein structure and the single-site mutation information to predict the structure of the mutated protein with the mutation. 
 
 ## Installation
 * Download or clone this repository
@@ -26,11 +26,11 @@ python src/prediction.py /path/to/1ert.pdb D_59_N A predictions
 ```
 
 ## Refine predictions
-* ATOMRefine method is utilized to refine further the predictions made by PreMut. Install ATOMRefine from this link (https://github.com/BioinfoMachineLearning/ATOMRefine) and follow the instructions provided in that repository to apply refinement to the predictions made with PreMut.
+* ATOMRefine can be utilized to further refine the predictions made by PreMut. Install ATOMRefine from this link (https://github.com/BioinfoMachineLearning/ATOMRefine) and follow the instructions provided in that repository to apply refinement to the predictions made by PreMut.
 
 ## Training
 * Download and install TM-score and TM-align from this link: (https://zhanggroup.org/TM-score/, https://zhanggroup.org/TM-align/)
-* Download all the files in the MutData2022 and MutData2023 datasets from the link (https://zenodo.org/record/8401256). Uncompress the files, and then move the uncompressed folders to the root directory of the PreMut repository.
+* Download all the files in the MutData2022 and MutData2023 datasets from the link (https://zenodo.org/record/8401256). Uncompress the files, and then move the uncompressed folders to the installation directory of the PreMut repository.
 * Run the following command to train the model
 ```
 python src/train.py
