@@ -148,6 +148,6 @@ for i in range(len(tmp_lst)-1):
     wild_pdb_dir += tmp_lst[i]
     wild_pdb_dir += '/'
 
-prediction = predictionClass(wild_pdb=wild_pdb,mutation_info=args.mutation_info,input_pdb_dir=wild_pdb_dir,save_dir=args.save_dir)
+prediction = predictionClass(wild_pdb=wild_pdb,mutation_info=args.mutation_info,input_pdb_dir=wild_pdb_dir,save_dir=args.output_dir)
 
 prediction.predict()
