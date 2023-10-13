@@ -19,10 +19,10 @@ conda env create -f environment.yml
 ```
 python src/prediction.py wild_pdb_path mutation_info chain_id output_dir
 ```
-* Here wild_pdb_path is the path to the structure file of the wild protein in the pdb format (e.g. /path/to/1ert.pdb), mutation_info is the information regarding the wild residue, mutated position (0 indexed) and the mutated residue (e.g. D_59_N), chain_id is the id of the chain in the wild pdb file (e.g. A), and output_dir is the directory to save the predicted structure for the mutant as a pdb file.
+* Here wild_pdb_path is the path to the structure file of the wild protein in the pdb format (e.g. /path/to/8b0s.pdb), mutation_info is the information regarding the wild residue, mutated position (0 indexed) and the mutated residue (e.g. C_144_A), chain_id is the id of the chain in the wild pdb file (e.g. A), and output_dir is the directory to save the predicted structure for the mutant as a pdb file.
 * Example
 ```
-python src/prediction.py examples/1ert.pdb D_59_N A predictions
+python src/prediction.py examples/8b0s.pdb C_144_A A predictions
 ```
 
 ## Refine predictions
