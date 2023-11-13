@@ -122,10 +122,15 @@ class PDBReader_All_Atom():
         # print(length_wild,flag_length,number_of_atoms)
         # print(mutant_xyz.loc[mutant_xyz['residue_number']==pos+1])
         # print(number_of_atoms)
+        # print(length_wild,flag_length)
         wild_xyz_for_input = []
         for idx in range(1+flag_length,length_wild+flag_length+1):
             if idx != self.pos+flag_length+1:
                 xyz_for_that_residue = wild_xyz.loc[wild_xyz['residue_number']==idx][['atom_name','x_coord','y_coord','z_coord']]
+                
+                # print(idx)
+                if wild_xyz.loc[wild_xyz['residue_number']==idx]['residue_name'].empty:
+                    continue
                 
                 residue_name = wild_xyz.loc[wild_xyz['residue_number']==idx]['residue_name'].iloc[0]
                 
@@ -196,7 +201,8 @@ class PDBReader_All_Atom():
         for idx in range(1+flag_length,length_mutant+flag_length+1):
             
             xyz_for_that_residue = mutant_xyz.loc[mutant_xyz['residue_number']==idx][['residue_name','atom_name','x_coord','y_coord','z_coord']]
-            
+            if mutant_xyz.loc[mutant_xyz['residue_number']==idx]['residue_name'].empty:
+                continue
             residue_name = mutant_xyz.loc[mutant_xyz['residue_number']==idx]['residue_name'].iloc[0]
             
             atoms_for_this_particular_residue = AMINO_ACID_ATOM[residue_name]
@@ -294,7 +300,8 @@ class PDBReader_All_Atom():
         for idx in range(1+flag_length,length_wild+flag_length+1):
             if idx != self.pos+flag_length+1:
                 atom_for_that_residue = wild_atom.loc[wild_atom['residue_number']==idx][['atom_name']]
-                
+                if wild_atom.loc[wild_atom['residue_number']==idx]['residue_name'].empty:
+                    continue
                 residue_name = wild_atom.loc[wild_atom['residue_number']==idx]['residue_name'].iloc[0]
                 atoms_for_this_particular_residue = AMINO_ACID_ATOM[residue_name]
                 atoms_available_in_pdb_for_this_particular_residue = wild_atom.loc[wild_atom['residue_number']==idx]['atom_name'].to_list()
