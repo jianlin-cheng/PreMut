@@ -12,6 +12,24 @@ Accurate prediction of the structure of any protein mutant with a single-site mu
 conda env create -f environment.yml
 ```
 
+*Some packages may fail to install. In that case, use the following commands to install these packages necessary for full environment installation.
+
+* Firstly, activate the created environment
+```
+conda activate PreMut
+```
+* pip install the following packages
+```
+pip install lightning
+```
+```
+pip install biopandas
+```
+```
+pip install rmsd
+```
+
+
 ## Make prediction
 
 * To make a prediction, save the wild pdb file in a folder and create a folder to save the prediction.
