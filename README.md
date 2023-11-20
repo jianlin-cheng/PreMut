@@ -68,6 +68,9 @@ python Evaluation.py MutData2022
 ```
 python Evaluation.py MutData2023
 ```
+
+## Acknowlegements
+The EGNN model code is partially adapted and built upon the source code from the following project [egnn](https://github.com/vgsatorras/egnn). We thank all the contributors and maintainers.
 ## Reference
 
 Sajid Mahmud, Alex Morehead,  Jianlin Cheng. Accurate prediction of protein tertiary structural changes induced by single-site mutations with equivariant graph neural networks. bioRxiv. (https://doi.org/10.1101/2023.10.03.560758)
