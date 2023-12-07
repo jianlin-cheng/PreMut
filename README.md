@@ -47,8 +47,8 @@ python src/prediction.py examples/8b0s.pdb C_144_A A predictions
 * ATOMRefine can be utilized to further refine the predictions made by PreMut. Install ATOMRefine from this link (https://github.com/BioinfoMachineLearning/ATOMRefine) and follow the instructions provided in that repository to apply refinement to the predictions made by PreMut.
 
 ## Training
-* Download and install TM-score and TM-align from this link: (https://zhanggroup.org/TM-score/, https://zhanggroup.org/TM-align/)
-* Download all the files in the MutData2022 and MutData2023 datasets from the link (https://zenodo.org/record/8401256). Uncompress the files, and then move the uncompressed folders to the installation directory of the PreMut repository.
+* Download and install TM-score and TM-align from this link: [TM-score](https://zhanggroup.org/TM-score/), [TM-align](https://zhanggroup.org/TM-align/)
+* Download all the files in the MutData2022 and MutData2023 datasets from the link [PreMut](https://zenodo.org/record/8401256). Uncompress the files, and then move the uncompressed folders to the installation directory of the PreMut repository.
 * Run the following command to train the model
 ```
 python src/train.py
@@ -60,6 +60,7 @@ python src/train.py
 ## Evaluation
 * Evaluation script is provided to check the reported performance in the paper.
 * Make sure the files are downloaded, uncompressed and moved to the root of the directory as instructed in the previous section.
+* Install SPECS from following the instructions from this link [SPECS](http://watson.cse.eng.auburn.edu/SPECS/).
 * To get the evaluation metrics on MutData2022_test dataset, run this command
 ```
 python Evaluation.py MutData2022
