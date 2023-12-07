@@ -17,7 +17,7 @@ class trainClass():
     def __init__(self,checkpoint_callback = checkpoint_callback
                  ,epochs=10
                  ):
-        self.trainer = pl.Trainer(accelerator='gpu', devices=[1], max_epochs=epochs,
+        self.trainer = pl.Trainer(accelerator='gpu', devices=[0], max_epochs=epochs,
                              callbacks=[checkpoint_callback])
     def initialize_data_module(self):
         self.data = MyDataModule()
