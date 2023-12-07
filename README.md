@@ -20,7 +20,7 @@ conda activate PreMut
 ```
 * pip install the following packages
 ```
-pip install lightning
+pip install pytorch-lightning==1.8
 ```
 ```
 pip install biopandas
