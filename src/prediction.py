@@ -122,7 +122,7 @@ class predictionClass():
         
         net.load_state_dict(new_state_dict)
 
-        pdbreader = PDBReader_All_Atom(pdb_dir=self.input_pdb_dir,mutant_pdb=self.wild_pdb,wild_pdb=self.wild_pdb,mutation_info=self.mutation_info)
+        pdbreader = PDBReader_All_Atom(pdb_dir=self.input_pdb_dir,mutant_pdb=self.wild_pdb,wild_pdb=self.wild_pdb,mutation_info=self.mutation_info,state='predict')
         graph, _ = pdbreader.pdb_to_graph()
         x= (graph.node_coords, graph.node_one_hot_sequence,graph.node_one_hot_sequence_residues)
         net.eval()
@@ -142,6 +142,7 @@ parser.add_argument('chain_id',help='Provide the chain id')
 parser.add_argument('output_dir', help='Directory to save the output')
 args = parser.parse_args()
 wild_pdb = args.wild_pdb_path.split('.')[0].split('/')[-1] + '_'+args.chain_id
+print(wild_pdb)
 tmp_lst = args.wild_pdb_path.split('.')[0].split('/')
 wild_pdb_dir = ''
 for i in range(len(tmp_lst)-1):
