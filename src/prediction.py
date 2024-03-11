@@ -111,7 +111,7 @@ class predictionClass():
 
     def predict(self):
         model = self.initialize_Lit_module()
-        checkpoint = torch.load(MODEL_CHECKPOINT_PATH)
+        checkpoint = torch.load(MODEL_CHECKPOINT_PATH,map_location=torch.device('cuda:0'))
         
         net = model.model
         key_map = {}
